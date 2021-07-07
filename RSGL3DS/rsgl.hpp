@@ -10,7 +10,7 @@ namespace RSGL{
     //int end();
     //std::string conversion();d
 
-    struct rect{int x,y,z; int length, width;};
+    struct rect{int x,y; int length, width;};
     struct circle { int x, y; int radius; };
     struct color { int r, g, b, a; };
 
