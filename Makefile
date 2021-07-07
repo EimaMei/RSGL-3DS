@@ -1,4 +1,4 @@
-PATH = /opt/devkitpro/devkitARM
+PATH = AddPathHere
 VERSION = main
 
 all:
@@ -10,6 +10,7 @@ all:
 	@echo ""
 	@echo ""
 	@echo "COMMANDS: make install, update, remove, credits"
+	@echo ""
 
 
 install:
@@ -20,4 +21,8 @@ update:
 remove:
 	rm -r $(PATH)/arm-none-eabi/include/RSGL3DS
 credits:
-	@echo "F"
+	@echo "ColleagueRiley - Creator and Author of RSGL as well as RSGL Wii"
+	@echo "EimaMei (me!) - Creator of RSGL 3DS 1.0 and 2.0"
+	@echo "Linux - for being a pog OS"
+	@echo "Homebrew community - for making this possible in the first place, and giving hacked consoles great games/emulators/apps etc. for years!"
+	@echo ""
