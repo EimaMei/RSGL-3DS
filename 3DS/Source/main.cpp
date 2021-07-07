@@ -1,4 +1,3 @@
-#define __3ds__ 1
 #include "RSGL.hpp"
 
 int main(int argc, char* argv[]) {
