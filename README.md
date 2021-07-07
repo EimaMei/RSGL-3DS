@@ -1,5 +1,6 @@
 # RSGL 3DS
 This is the official port of RSGL for the 3DS, done by EimaMei
+RSGL Discord server for support: https://discord.gg/ckC7mqdjCb
 # Notes
 1. The library port is not finished yet, and the port will get constant updates to keep up with the main RSGL repository.<br />
 2. This isn't a replacement of devkitpro's libraries, this is just used to port RSGL programs to 3DS or begin developing with RSGL for 3DS first since it's a bit easier to learn and use.<br />
