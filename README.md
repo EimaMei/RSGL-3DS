@@ -8,10 +8,6 @@ RSGL Discord server for support: https://discord.gg/ckC7mqdjCb
 1. A hacked 3DS (can be old or new)<br />
 2. Homebrew<br />
 3. DevkitPro with 3DS Development enabled<br />
-# Guide on downloading the library
-1. Download this repository<br />
-2. Follow the makefile's instructions by using `make` in the terminal (you must have the terminal running inside the RSGL3DS folder)<br />
-3. That's basically it. The `3DS` file is where your source file is. To compile the code, you need to `cd <the/path/to/3DS>` in the terminal and then type `make`.
 # Plans
 1. Add the main-library features<br />
 2. Make a documentation and/or wiki for the port<br />
