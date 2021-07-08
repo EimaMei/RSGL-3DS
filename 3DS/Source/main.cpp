@@ -1,4 +1,5 @@
-#include "RSGL3DS/rsgl.hpp"
+#define __3ds__
+#include "RSGL.hpp"
 
 int main(int argc, char* argv[]) {
 	RSGL::init();
