@@ -4,18 +4,18 @@
 int main(int argc, char* argv[]) {
 	RSGL::init();
     Event e;
-	std::cout << "Hello, world!\n";
 	RSGL::setBackground({255, 255, 255});
+	RSGL::enableConsole(rsgl::bottomScreen);
+	std::cout << "Hello, world, from the 3DS!\n";
 	while (aptMainLoop()) {
 		e.CheckEvents();
 		if (RSGL::isPressed(KEY_START)) { break; } 
 		if (RSGL::isHeld(KEY_A)) { std::cout << "Rucka rucka!\n"; } 
-		if (RSGL::isHeld(KEY_B)) { std::cout << "Sussy sus sus\n"; } 
 
 		RSGL::renderFrame(RSGL::topScreen);
 
-		RSGL::drawRect(RSGL::topScreen, {20, 20, 50, 50}, {255,0,0});
-		RSGL::drawRect(RSGL::topScreen, {20, 100, 50, 50}, {0x40, 0xEA, 0x87}, false);
+		RSGL::drawRect({20, 20, 50, 50}, {255,0,0});
+		RSGL::drawCircle({80, 100, 25}, {0,0,0}, false)
 
 		RSGL::nextFrame();
 	}
