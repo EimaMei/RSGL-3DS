@@ -17,7 +17,7 @@ namespace RSGL{
     struct image {const char* file; RSGL::rect r;};
     struct color { int r, g, b; };
 
-    int prev_pressed, prev_held, touch_x, touch_y;
+    int prev_pressed, prev_held;
     u32 background_color;
     C3D_RenderTarget* topScreen = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
     C3D_RenderTarget* bottomScreen = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_RIGHT);
@@ -96,6 +96,7 @@ int RSGL::init(){
 
 
 struct Event{
+  int x, y;
   void CheckEvents();
 };
 
@@ -104,12 +105,12 @@ void Event::CheckEvents(){
     touchPosition touch;
     hidTouchRead(&touch);
     
-  	u32 pressed = hidKeysDown();
+   	u32 pressed = hidKeysDown();
     u32 held = hidKeysHeld();
     RSGL::prev_pressed = pressed;
     RSGL::prev_held = held;
-    RSGL::touch_x = touch.px;
-    RSGL::touch_y = touch.py;
+    x = touch.px;
+    y = touch.py;
 }
 
 int RSGL::Quit(){
