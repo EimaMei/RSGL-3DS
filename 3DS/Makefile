@@ -43,12 +43,10 @@ DATA		:=	data
 INCLUDES	:=	include
 GRAPHICS	:=	gfx
 GFXBUILD	:=	$(BUILD)
-#ROMFS		:=	romfs
-#GFXBUILD	:=	$(ROMFS)/gfx
 
-APP_TITLE := RSGL for 3DS
-APP_DESCRIPTION := A 3DS port of RSGL
-APP_AUTHOR := EimaMei
+APP_TITLE        := RSGL for 3DS
+APP_DESCRIPTION  := A 3DS port of RSGL
+APP_AUTHOR       := EimaMei
 
 #---------------------------------------------------------------------------------
 # options for code generation

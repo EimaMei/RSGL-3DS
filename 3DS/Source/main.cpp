@@ -1,25 +1,22 @@
 #include "3ds.hpp"
-#include <iostream>
+#include <iostream> 
+
+bool running = true;
 
 int main(int argc, char* argv[]) {
 	RSGL::init();
     Event e;
-	RSGL::setBackground({255, 255, 255});
-	RSGL::enableConsole(rsgl::bottomScreen);
-	std::cout << "Hello, world, from the 3DS!\n";
+	RSGL::window topScreen = RSGL::createWindow(TOP_SCREEN, 0,0,SCREEN_WIDTH,SCREEN_LENGTH, {255,255,255});
+	RSGL::enableConsole(BOTTOM_SCREEN);
+	std::cout << "Thank you for using RSGL 3DS! We hope that it'll be easy using this library.";
 	while (aptMainLoop()) {
 		e.CheckEvents();
-		if (RSGL::isPressed(KEY_START)) { break; } 
-		if (RSGL::isHeld(KEY_A)) { std::cout << "Rucka rucka!\n"; } 
-
-		RSGL::renderFrame(RSGL::topScreen);
-
-		RSGL::drawRect({20, 20, 50, 50}, {255,0,0});
-		RSGL::drawCircle({80, 100, 25}, {0,0,0}, false)
-
-		RSGL::nextFrame();
+		if (RSGL::isClicked(KEY_START)){
+			running = false;
+		}
+		RSGL::InitWindow(topScreen);
+        RSGL::drawRect({25,25,100,100},{255,0,0});
+		RSGL::RenderWindow(topScreen);
 	}
-
 	RSGL::Quit();
-	return 0;
 }
